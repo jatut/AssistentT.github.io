@@ -1,0 +1,434 @@
+/*
+* {
+  margin: 0;
+  padding: 0;
+}
+*/
+html,
+body
+{
+  height: 100%;
+	width: 100%;
+}
+
+#content {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+
+
+/*
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+*/
+video {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    /*-webkit-transform: 	translateX(-50%) translateY(-50%);*/
+	   transform: 			translateX(-50%) translateY(-50%);
+    background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+    background-size: cover;
+    /*-webkit-transition: 1s opacity;*/
+  transition: 1s opacity;
+	mute: falshe;
+}
+
+.stopfade {
+   opacity: .5;
+}
+
+#polina {
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight: 100;
+  background:  #ffffff00;
+  color:       white;
+  /*padding:   2rem;*/
+  width:       35%;
+  margin:	   2rem;
+  float: 	   right;
+  font-size:   1.2rem;
+}
+
+h1 {
+  font-size: 			3rem;
+  text-transform:		uppercase;
+  margin-top: 			0;
+  letter-spacing: 		.3rem;
+}
+
+
+@media screen and (max-width: 100px) {
+  							div{width: 60%;}
+}
+
+@media screen and (max-device-width: 800px) {
+	html { background: url("//demosthenes.info/assets/images/polina.jpg") #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+
+/*****************************************************************************/
+/******************************** Описание МЕНЮ ******************************/
+/*****************************************************************************/
+/* Stuff I added */
+.menu-outer:hover ~ .menu-close {
+  margin-right:-100px;
+}
+.menu-outer:hover .bar { background:rgba(100,200,240,.9); }
+.menu-outer > nav ul { top:15%; }
+
+/* The rest I chnaged parts but not most of it */
+/**********************************************
+html, body {
+  background: rgba(20,20,20,1);
+}
+***********************************************/
+.menu-outer {
+  overflow: 				hidden;
+  position: 				fixed;
+  top: 						0;
+  font-family: 				'Montserrat', serif;
+  z-index: 					998;
+  width: 					100%;
+  left: 					100%;
+  margin-left: 				-100px;
+  height: 					200%;
+  background: 				rgba(100,200,240,0.5);
+  -webkit-transition: 		all ease .5s;
+  -moz-transition: 			all ease .5s;
+  -ms-transition: 			all ease .5s;
+  -o-transition: 			all ease .5s;
+  transition: 				all ease .5s;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: 	top left;
+  -ms-transform-origin: 	top left;
+  -o-transform-origin: 		top left;
+  transform-origin: 		top left;
+  -webkit-transform: 		rotate(-45deg);
+  -moz-transform: 			rotate(-45deg);
+  -ms-transform: 			rotate(-45deg);
+  -o-transform: 			rotate(-45deg);
+  transform: 				rotate(-45deg);
+}
+
+.menu-outer:hover {
+  background: 				rgba(100,200,240,0.5);
+  left: 					0;
+  margin-left: 				0;
+  -webkit-transform: 		rotate(0deg);
+  -moz-transform: 			rotate(0deg);
+  -ms-transform: 			rotate(0deg);
+  -o-transform: 			rotate(0deg);
+  transform: 				rotate(0deg);
+}
+
+.menu-icon {
+  z-index: 999;
+  position: absolute;
+  top: 58px;
+  left: 15px;
+  width: 30px;
+  pointer-events: none;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+}
+.menu-icon .bar {
+  background: rgba(250,250,250,1);
+  width: 100%;
+  height: 5px;
+  margin: 0 0 5px;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+}
+.menu-outer:hover > .menu-icon {
+  opacity: 0;
+}
+nav ul {
+  position:absolute;
+  width:100%;
+  padding: 0;
+  left: 10%;; /*prevents possible click when not oppened*/
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+}
+.menu-outer:hover > nav ul {
+  left: 0;
+}
+nav li {
+  list-style:none;
+  text-align: center;
+  text-transform: uppercase;
+}
+nav li a {
+  font-size: 2em;
+  color: rgba(0,0,0,.8);
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 20px;
+  display:block;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+}
+nav li a:hover {
+  color: rgba(255,255,255,1);
+}
+/*********************************************************************/
+@media screen and (max-width: 600px), screen and (max-height: 600px) {
+  nav ul {font-size:.75em;}
+  nav ul a {padding: 10px;}
+}
+/*********************************************************************/
+.menu-close {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 200px;
+  height: 200px;
+  background: rgba(250,130,70,0.5);
+  cursor: pointer;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  -ms-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s;
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.menu-close .menu-icon {
+  right: 15px; left: auto;top: 68px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu-close .bar {
+  background: rgba(250,250,250,1);
+  width: 100%;
+  height: 5px;
+  position:absolute;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+}
+.menu-close .bar:first-child {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.menu-close .bar:last-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*****************************************************************************/
+/******************************* text slider 05 ******************************/
+/*****************************************************************************/
+
+.carousel-inner > . > img,
+.carousel-inner > . > a > img {
+	 rgba(0,0,0,1);
+     width: 100%;
+	 margin: auto;
+}
+/*****************************************************************************/
+/******************************* footer ******************************/
+/*****************************************************************************/
+
+.social-nav {
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  margin: 10px auto;
+}
+.social-nav li {
+  display: inline-block;
+}
+.social-nav a {
+  display: inline-block;
+  float: left;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 48px;
+  background: #000;
+  position: relative;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.model-7 li {
+  margin: 0 10px;
+}
+.model-7 a {
+  background: none;
+  -moz-box-shadow: 0 0 4px 3px;
+  -webkit-box-shadow: 0 0 4px 3px;
+  box-shadow: 0 0 4px 3px;
+  text-shadow: 0 0 1px #333;
+  -moz-transition: -moz-transform 0.4s, background 0.4s;
+  -o-transition: -o-transform 0.4s, background 0.4s;
+  -webkit-transition: -webkit-transform 0.4s, background 0.4s;
+  transition: transform 0.4s, background 0.4s;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.model-7 a .fa {
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+.model-7 a:hover {
+  background: #fff;
+}
+.model-7 a:hover .fa {
+  -moz-transform: rotate(-10deg) scale(3);
+  -ms-transform: rotate(-10deg) scale(3);
+  -webkit-transform: rotate(-10deg) scale(3);
+  transform: rotate(-10deg) scale(3);
+}
+.model-7 .twitter {
+  color: #00ACED;
+}
+.model-7 .facebook {
+  color: #3B579D;
+}
+.model-7 .google-plus {
+  color: #DD4A3A;
+}
+.model-7 .linkedin {
+  color: #007BB6;
+}
+.model-7 .pinterest {
+  color: #CB2026;
+}
+.model-7 .vk {
+  color: #3B579D;
+}
+.model-7 .odnoklassniki {
+  color: #DD4A3A;
+}
+
+/*---   Описание слайдера   ---*/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+}
+rgba(100,200,240,0.5);rgba(100,200,240,0.5);
+.content {
+/*
+  padding: 30px;
+  font: 300 40px Lato, sans-serif;
+*/
+  text-align: center;
+/*
+  color: #999;
+  background: #eee;
+*/
+width: 100%;
+}
+
+/*.footer {
+position:absolute;
+color: darken(steelblue, 10%);
+background-color: darken(steelblue, 50%);
+}*/
+
+	background: rgba(254, 165, 0, 0.2);
+    position: relative;
+    height: 50px;
+    /*margin-top: -100px;*/
+		margin: -50px;
+		/*padding: 400px;*/
+		padding-bottom: -600px;
+		padding-left: 33%;
+		padding-right: 33%;
+    clear: both;
+}
+
+footer {
+/*  background: rgba(254, 165, 0, 0.4);*/
+  height: 80px;
+  position: relative;  
+  margin-top: -70px;
+/*  clear: both;*/
+/*  padding-left: 33%;*/
+/*  padding-right: 33%;*/
+/*    padding: 0.3em;*/
+/*	padding-left: 10%;*/
+/*	padding-right: 10%;*/
+/*padding: 20px 30px;*/
+ font-size: 1.5em;
+  text-align: center;
+}
